@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-17 12:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: a3_site/settings.py:107
+msgid "English"
+msgstr ""
+
+#: a3_site/settings.py:108
+msgid "Ukrainian"
+msgstr ""
+
+#: projects/admin.py:13 projects/models.py:17
+msgid "Project"
+msgstr ""
+
+#: projects/models.py:13
+msgid "Featured Image"
+msgstr ""
+
+#: projects/models.py:18
+msgid "Projects"
+msgstr ""
+
+#: projects/templates/pages/project.html:21
+msgid "Posted by"
+msgstr ""
+
+#: projects/templates/pages/project.html:27
+msgid "in"
+msgstr ""
+
+#: projects/templates/pages/project.html:33
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+#: projects/templates/pages/project.html:55
+msgid "Tags"
+msgstr ""
+
+#: projects/templates/pages/project.html:65
+msgid "read more"
+msgstr ""
+
+#: projects/templates/pages/project.html:71
+msgid "Comments"
+msgstr ""
+
+#: projects/templates/pages/project.html:75
+#, python-format
+msgid "%(comments_count)s comment"
+msgid_plural "%(comments_count)s comments"
+msgstr[0] ""
+msgstr[1] ""

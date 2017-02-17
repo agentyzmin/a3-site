@@ -1,0 +1,27 @@
+{% load pages_tags mezzanine_tags i18n staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{#    <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">#}
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>here be header</h1>
+
+        {% block content %}
+        {% endblock content %}
+
+        <p>here be footer</p>
+
+    </div>
+
+</body>
+</html>
