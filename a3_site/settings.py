@@ -6,6 +6,8 @@ from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import SET_NULL
 
+import dj_database_url
+
 
 ######################
 # MEZZANINE SETTINGS #
@@ -68,6 +70,9 @@ EXTRA_MODEL_FIELDS = (
 )
 
 SECRET_KEY = os.environ['SECRET_KEY']
+
+DATABASES = dict()
+DATABASES['default'] = dj_database_url.config()
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
