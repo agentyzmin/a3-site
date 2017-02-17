@@ -71,12 +71,13 @@ EXTRA_MODEL_FIELDS = (
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-db_from_env = dj_database_url.config(conn_max_age=500)
 
 DATABASES = {
-
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'a3_site_db',
+    }
 }
-
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
