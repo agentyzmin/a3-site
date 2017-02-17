@@ -67,6 +67,8 @@ EXTRA_MODEL_FIELDS = (
     ),
 )
 
+SECRET_KEY = os.environ['SECRET_KEY']
+
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
 BLOG_USE_FEATURED_IMAGE = True
