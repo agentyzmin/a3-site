@@ -71,8 +71,14 @@ EXTRA_MODEL_FIELDS = (
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-DATABASES = dict()
-DATABASES['default'] = dj_database_url.config()
+db_from_env = dj_database_url.config(conn_max_age=500)
+
+DATABASES = {
+
+}
+
+DATABASES['default'].update(db_from_env)
+
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
