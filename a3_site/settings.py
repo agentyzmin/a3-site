@@ -98,7 +98,8 @@ BLOG_USE_FEATURED_IMAGE = True
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
+    'murmuring-everglades-32988.herokuapp.com'
 ]
 
 # Local time zone for this installation. Choices can be found here:
