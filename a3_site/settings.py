@@ -315,6 +315,9 @@ OPTIONAL_APPS = (
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
+MIGRATION_MODULES = {
+    "blog": "a3_site.migrations.pages_migration",
+}
 
 ##################
 # LOCAL SETTINGS #
