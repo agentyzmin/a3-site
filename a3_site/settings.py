@@ -69,7 +69,6 @@ EXTRA_MODEL_FIELDS = (
     ),
 )
 
-SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # Setting to turn on featured images for blog posts. Defaults to False.
@@ -314,6 +313,9 @@ OPTIONAL_APPS = (
     PACKAGE_NAME_GRAPPELLI,
 )
 
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+
 ##################
 # LOCAL SETTINGS #
 ##################
@@ -353,3 +355,5 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+
