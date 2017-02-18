@@ -71,17 +71,6 @@ EXTRA_MODEL_FIELDS = (
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'a3_site_db',
-    }
-}
-
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-
-DEBUG = True
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
@@ -171,6 +160,11 @@ DATABASES = {
         "PORT": "",
     }
 }
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
+DEBUG = True
 
 DEFAULT_CHARSET = "utf-8"
 
