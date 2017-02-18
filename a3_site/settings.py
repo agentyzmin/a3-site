@@ -121,7 +121,7 @@ SITE_TITLE = "Агенти Змін"
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -163,7 +163,6 @@ DATABASES = {
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
-DEBUG = True
 
 DEFAULT_CHARSET = "utf-8"
 
@@ -315,9 +314,9 @@ OPTIONAL_APPS = (
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-MIGRATION_MODULES = {
-    "blog": "a3_site.migrations.pages_migration",
-}
+# MIGRATION_MODULES = {
+#     "blog": "a3_site.migrations.pages_migration",
+# }
 
 ##################
 # LOCAL SETTINGS #
