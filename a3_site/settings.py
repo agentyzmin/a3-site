@@ -65,7 +65,7 @@ EXTRA_MODEL_FIELDS = (
         'mezzanine.blog.models.BlogPost.project',
         'django.db.models.ForeignKey',
         ('projects.Project', ),
-        {'null': True, 'on_delete': SET_NULL},
+        {'null': True, 'on_delete': SET_NULL, 'default': SET_NULL},
     ),
 )
 
