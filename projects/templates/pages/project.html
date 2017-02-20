@@ -7,7 +7,9 @@
 {#{% endblock title %}#}
 
 {% block main %}
+    {% if page.project.featured_image  %}
     <p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail page.project.featured_image 600 0 %}"></p>
+    {% endif %}
 
     <div>{{ page.project.content|safe }}</div>
 
