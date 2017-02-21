@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-17 12:19+0000\n"
+"POT-Creation-Date: 2017-02-21 12:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,21 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: a3_site/settings.py:107
+#: a3_site/settings.py:112
 msgid "English"
 msgstr "Англійська"
 
-#: a3_site/settings.py:108
+#: a3_site/settings.py:113
 msgid "Ukrainian"
 msgstr "Українська"
 
-#: projects/admin.py:13 projects/models.py:17
-msgid "Project"
+#: projects/admin.py:13
+#, fuzzy
+#| msgid "Project"
+msgid "project"
 msgstr "Проект"
 
 #: projects/models.py:13
 msgid "Featured Image"
 msgstr "Зображення"
+
+#: projects/models.py:17
+msgid "Project"
+msgstr "Проект"
 
 #: projects/models.py:18
 #, fuzzy
@@ -41,37 +47,81 @@ msgstr "Зображення"
 msgid "Projects"
 msgstr "Проекти"
 
-#: projects/templates/pages/project.html:21
+#: projects/templates/base.html:44
+msgid "Toggle Navigation"
+msgstr ""
+
+#: projects/templates/base.html:104
+msgid "Powered by"
+msgstr ""
+
+#: projects/templates/base.html:107
+msgid "and"
+msgstr ""
+
+#: projects/templates/base.html:110
+msgid "Theme by"
+msgstr ""
+
+#: projects/templates/base.html:113
+msgid "View Mobile Site"
+msgstr ""
+
+#: projects/templates/index.html:4 projects/templates/index.html:5
+#: projects/templates/index.html:8
+msgid "Home"
+msgstr "Головна"
+
+#: projects/templates/index.html:12
+msgid ""
+"\n"
+"<h2>\n"
+"Агенти змін\n"
+"</h2>\n"
+"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/"
+"vIal-CT9vlY\" frameborder=\"0\" allowfullscreen></iframe>\n"
+"<p>Нова схема ліній у вагонах метро. Нові зрозумілі плакати-оголошення та "
+"проїзні картки для метро. Вказівники для велосипедистів. Редизайн фунікулера "
+"та міської електрички. Відеоінфографіка у вагонах Інтерсіті+.</p>\n"
+"<p>На все це — один рік, нуль гривень, жодного протекторату від влади, "
+"кілька навіжених дизайнерів-добровольців, і небайдужі кияни.</p>\n"
+"<p>Як це можливо? Ми cтерли кордон між дизайнером і користувачем: побудували "
+"десятитисячну спільноту киян, які творять дизайн свого міста разом з нами.</"
+"p>\n"
+msgstr ""
+
+#: projects/templates/pages/project.html:26
 msgid "Posted by"
 msgstr ""
 
-#: projects/templates/pages/project.html:27
+#: projects/templates/pages/project.html:32
 msgid "in"
 msgstr ""
 
-#: projects/templates/pages/project.html:33
+#: projects/templates/pages/project.html:38
 #, python-format
 msgid "%(sometime)s ago"
 msgstr ""
 
-#: projects/templates/pages/project.html:55
+#: projects/templates/pages/project.html:60
 msgid "Tags"
 msgstr ""
 
-#: projects/templates/pages/project.html:65
+#: projects/templates/pages/project.html:70
 msgid "read more"
 msgstr ""
 
-#: projects/templates/pages/project.html:71
+#: projects/templates/pages/project.html:76
 msgid "Comments"
 msgstr "Комментарі"
 
-#: projects/templates/pages/project.html:75
+#: projects/templates/pages/project.html:80
 #, python-format
-msgid "%(comments_count) comment"
+msgid "%(comments_count)s comment"
 msgid_plural "%(comments_count)s comments"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #, fuzzy
 #~| msgid "Projects"

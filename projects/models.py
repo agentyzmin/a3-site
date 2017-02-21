@@ -10,6 +10,7 @@ from mezzanine.utils.models import upload_to
 
 class Project(Page, RichText):
 
+    # status =
     featured_image = FileField(verbose_name=_("Featured Image"),
                                upload_to=upload_to("blog.BlogPost.featured_image", "blog"),
                                format="Image", max_length=255, null=True, blank=True)

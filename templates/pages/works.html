@@ -1,0 +1,16 @@
+{% extends 'pages/richtextpage.html' %}
+
+{% load i18n  mezzanine_tags blog_tags keyword_tags disqus_tags pages_tags%}
+
+{% block main %}
+    {{ block.super  }}
+
+    <h3>Проекти</h3>
+    <ul>
+        {% for project in projects %}
+        <li>{{ project.title }}</li>
+
+        {% endfor %}
+    </ul>
+
+{% endblock main %}
