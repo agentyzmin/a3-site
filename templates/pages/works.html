@@ -6,11 +6,17 @@
     {{ block.super  }}
 
     <h3>Проекти</h3>
-    <ul>
-        {% for project in projects %}
-        <li>{{ project.title }}</li>
 
-        {% endfor %}
-    </ul>
+    {% for project in projects %}
+        <div class="col-md-6">
+
+            <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail project.featured_image 0 0 %}" alt="">
+
+            {{ project.title }}
+
+        </div>
+
+
+    {% endfor %}
 
 {% endblock main %}

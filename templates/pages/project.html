@@ -6,12 +6,24 @@
 {#    {{ page.title }}#}
 {#{% endblock title %}#}
 
-{% block main %}
+{% block featured_image %}
     {% if page.project.featured_image  %}
-    <p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail page.project.featured_image 600 0 %}"></p>
+        <div class="featured-image-container img-responsive">
+            <img class="" id="featured-image" src="{{ MEDIA_URL }}{% thumbnail page.project.featured_image 0 0 %}">
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block main %}
+
+    {% if page.project.authors %}
+    <div id="project-authors" class="col-md-3">{{ page.project.authors|safe }}</div>
     {% endif %}
 
-    <div>{{ page.project.content|safe }}</div>
+    <div class="">
+        <div class="">{{ page.project.content|safe }}</div>
+    </div>
 
     {% for blog_post in page.project.blogpost_set.all %}
 

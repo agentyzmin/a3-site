@@ -4,8 +4,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+    <link rel="shortcut icon" href="{% static "img/upload-10244210-9606-11e5-9a1e-911d7ecfb9dc_144.png" %}">
 
     {% compress css %}
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
@@ -20,6 +21,9 @@
     <link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
     {% endif %}
     {% endifinstalled %}
+
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+
     {% block extra_css %}{% endblock %}
     {% endcompress %}
 
@@ -60,9 +64,9 @@
         </div>
     </div>
 
+    {% block featured_image %}{% endblock %}
 
     <div class="container">
-
 
     {% nevercache %}
     {% if messages %}
@@ -78,17 +82,13 @@
     {% endnevercache %}
 
 
-    <ul class="breadcrumb">
-    {% spaceless %}
-    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-    {% endspaceless %}
-    </ul>
-
-    <h1>{% block title %}{% endblock %}</h1>
-
-    <div class="col-md-7 middle">
-        {% block main %}{% endblock main %}
+    <div class="col-md-offset-3">
+        <h1>{% block title %}{% endblock %}</h1>
     </div>
+
+{#    <div class="col-md-10 col-md-offset-1">#}
+        {% block main %}{% endblock main %}
+{#    </div>#}
     </div>
 
     <footer>

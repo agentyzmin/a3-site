@@ -145,17 +145,11 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 
 DATABASES = {
     "default": {
-        # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
         "ENGINE": "django.db.backends.",
-        # DB name or path to database file if using sqlite3.
         "NAME": "",
-        # Not used with sqlite3.
         "USER": "",
-        # Not used with sqlite3.
         "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
         "HOST": "",
-        # Set to empty string for default. Not used with sqlite3.
         "PORT": "",
     }
 }
@@ -264,6 +258,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
+    'cloudinary',
     'modeltranslation',
     'projects',
 )
@@ -317,6 +312,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 MIGRATION_MODULES = {
     "blog": "a3_site.migrations.pages_migrations",
 }
+
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 ##################
 # LOCAL SETTINGS #
