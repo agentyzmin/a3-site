@@ -2,17 +2,20 @@
 
 {% load i18n  mezzanine_tags blog_tags keyword_tags disqus_tags pages_tags%}
 
+
+
 {% block main %}
     {{ block.super  }}
 
     <h3>Проекти</h3>
 
     {% for project in projects %}
-        <div class="col-md-6">
+        <div class="col-md-6 project-preview">
 
-            <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail project.featured_image 0 0 %}" alt="">
-
-            {{ project.title }}
+            <a href="{{ project.get_absolute_url }}">
+                <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail project.featured_image 0 0 %}" alt="">
+            </a>
+            <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
 
         </div>
 

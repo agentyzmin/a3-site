@@ -11,7 +11,6 @@ from projects.models import Project
 
 blogpost_fieldsets = deepcopy(BlogPostAdmin.fieldsets)
 blogpost_fieldsets[0][1]["fields"].insert(-2, _("project",))
-blogpost_fieldsets[0][1]["fields"].insert(-2, _("authors",))
 
 
 class ProjectBlogPostAdmin(BlogPostAdmin):
