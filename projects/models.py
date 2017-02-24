@@ -7,7 +7,6 @@ from mezzanine.core.fields import FileField
 from mezzanine.blog.models import BlogPost
 from mezzanine.utils.models import upload_to
 
-from cloudinary.models import CloudinaryField
 
 class Project(Page, RichText):
 
