@@ -1,0 +1,22 @@
+.featured-image-container{
+    margin-top: 50px;
+    max-height: 350pt;
+    overflow: hidden;
+}
+
+#featured-image{
+    width: 100%;
+
+}
+
+.project-preview{
+    padding-bottom: 15pt;
+}
+
+h1{
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+}
