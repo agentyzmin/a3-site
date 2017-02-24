@@ -88,7 +88,8 @@ BLOG_USE_FEATURED_IMAGE = True
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'murmuring-everglades-32988.herokuapp.com'
+    'murmuring-everglades-32988.herokuapp.com',
+    '138.68.65.92',
 ]
 
 # Local time zone for this installation. Choices can be found here:
