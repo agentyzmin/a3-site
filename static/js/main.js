@@ -5,7 +5,7 @@ $(window).resize(function () {
     featured_image_resize();
 });
 
-$(document).ready(function () {
+$('#featured-image').load(function () {
     featured_image_resize();
 })
 
