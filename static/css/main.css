@@ -37,29 +37,35 @@ h2{
     font-family: proba_nav2light;
     color: rgba(34, 34, 34, 0.5);
     letter-spacing: 2.2pt;
+    font-size: 10pt;
 }
 
 .project-authors-title{
     text-transform: uppercase;
-    font-family: proba_nav2light;
+    font-family: proba_nav2medium;
     font-size: 8pt;
     letter-spacing: 2.2pt;
 }
 
 .project-authors{
-    line-height: 80%;
-    padding-bottom: 10pt;
+    padding-bottom: 8pt;
+    font-size: 10pt;
+}
+
+.project-authors p{
+    margin-bottom: 0.3em;
 }
 
 .page-data{
-    max-width: 600pt;
+max-width: 600pt;
+font-size: 13pt;
 }
-
 
 #title-row{
     display: flex;
     align-items: baseline;
     padding-bottom: 20pt;
+    flex-wrap: wrap;
 }
 
 .navbar-brand{
@@ -68,4 +74,24 @@ h2{
 
 .navbar-default{
     background-color: white;
+}
+
+.img-description{
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    font-style: italic;
+    font-size: 9pt;
+    text-align: center;
+}
+
+.page-data-block{
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+
+}
+
+.footer{
+
+    height: 200pt;
+    background-color: #fafafa;
 }
