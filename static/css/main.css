@@ -12,7 +12,7 @@ body{
 }
 
 #featured-image{
-    width: 100%;
+    width: 100vw;
 
 }
 
@@ -95,3 +95,14 @@ font-size: 13pt;
     height: 200pt;
     background-color: #fafafa;
 }
+
+.page-data-fullwidth{
+    margin-left: calc((100% - 100vw)/2);
+    margin-right: calc((100% - 100vw)/2);
+    width: 100vw;
+}
+
+.thumbnail{
+    border: none;
+}
+
