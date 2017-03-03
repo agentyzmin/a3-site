@@ -20,14 +20,11 @@ body{
     padding-bottom: 15pt;
 }
 
-h1{
-    font-weight: bold;
+h1, h2, h3{
     font-family: proba_nav2bold;
 }
 
-h2{
-    font-weight: bold;
-}
+
 #description{
     font-size: 17pt;
 }
@@ -102,7 +99,7 @@ font-size: 13pt;
     width: 100vw;
 }
 
-.thumbnail{
+.borderless{
     border: none;
 }
 
