@@ -73,6 +73,24 @@ font-size: 13pt;
     background-color: white;
 }
 
+.footer-image{
+    margin-left: 5pt;
+    margin-right: 5pt;
+}
+
+#red-box{
+    height: 100pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20pt;
+    color: #d1240a;
+    border: 1px solid #d1240a;
+    margin-top: 15pt;
+    margin-bottom: 15pt;
+}
+
+
 .img-description{
     padding-top: 5pt;
     padding-bottom: 5pt;
