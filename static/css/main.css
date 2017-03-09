@@ -1,11 +1,11 @@
 body{
     font-family: proba_nav2medium;
+    margin-top: 50px;
 }
 
 
 
 .featured-image-container{
-    margin-top: 50px;
     max-height: 250pt;
     overflow: hidden;
     margin-bottom: 50pt;
@@ -43,6 +43,21 @@ h1, h2, h3{
     font-size: 8pt;
     letter-spacing: 2.2pt;
 }
+#project-authors{
+    padding-bottom: 8pt;
+    font-size: 10pt;
+}
+
+#project-authors h4{
+    text-transform: uppercase;
+    font-family: proba_nav2medium;
+    font-size: 8pt;
+    letter-spacing: 2.2pt;
+}
+
+#project-authors p{
+    margin-bottom: 0.3em;
+}
 
 .project-authors{
     padding-bottom: 8pt;
@@ -56,6 +71,17 @@ h1, h2, h3{
 .page-data{
 max-width: 600pt;
 font-size: 13pt;
+}
+
+.main-data p,
+.main-data div
+{
+    overflow: hidden;
+}
+
+.main-data img{
+    width: 100%;
+    height: 100%;
 }
 
 #title-row{
@@ -107,7 +133,7 @@ font-size: 13pt;
 
 .footer{
 
-    height: 120pt;
+    min-height: 120pt;
     background-color: #fafafa;
 }
 

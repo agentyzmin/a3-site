@@ -9,21 +9,21 @@
 {% block featured_image %}
     {% if page.project.featured_image  %}
         <div class="featured-image-container img-responsive">
-            <img class="" id="featured-image" src="{{ MEDIA_URL }}{% thumbnail page.project.featured_image 0 0 %}">
+            <img class="" id="featured-image" src="{{ MEDIA_URL }}{% thumbnail page.project.featured_image 0 0 %}" onload="featured_image_resize()">
         </div>
     {% endif %}
 {% endblock %}
 
 
 {% block main %}
+    <div class="row">
+        {% if page.project.authors %}
+            <div id="project-authors" class="col-md-3" style="float: left">{{ page.project.authors|safe }}</div>
+        {% endif %}
 
-    {% if page.project.authors %}
-    <div id="project-authors" class="col-md-3">{{ page.project.authors|safe }}</div>
-    {% endif %}
-
-    <div class="text-justify">
-        <div class="">{{ page.project.content|safe }}</div>
+        <div class="main-data">{{ page.project.content|safe }}</div>
     </div>
+
 
     {% for blog_post in page.project.blogpost_set.all %}
 

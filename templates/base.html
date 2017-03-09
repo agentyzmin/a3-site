@@ -10,7 +10,7 @@
 
     {% compress css %}
     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
-    <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+{#    <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">#}
 {#    <link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">#}
     {% if LANGUAGE_BIDI %}
     <link rel="stylesheet" href="{% static "css/bootstrap-rtl.css" %}">
@@ -32,6 +32,9 @@
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "js/bootstrap.js" %}"></script>
     <script src="{% static "js/bootstrap-extras.js" %}"></script>
+
+    <script src="{% static "js/main.js" %}"></script>
+
     {% block extra_js %}{% endblock %}
     {% endcompress %}
 
@@ -45,16 +48,17 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">{% trans "Toggle Navigation" %}</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                 {% block navbar_title %}
-                    <div class="navbar-brand" >
-                    <a href="/"><img src="https://rm-content.s3.amazonaws.com/5194a14fc8cfb50000000169/422560/upload-7cb9ac80-75bd-11e5-abb7-57bb780c8fc6.png" style="opacity: 1;" url="https://rm-content.s3.amazonaws.com/5194a14fc8cfb50000000169/422560/upload-7cb9ac80-75bd-11e5-abb7-57bb780c8fc6.png"></a>
-                    </div>
+                <a class="navbar-brand" href="/">
+                    <img src="https://rm-content.s3.amazonaws.com/5194a14fc8cfb50000000169/422560/upload-7cb9ac80-75bd-11e5-abb7-57bb780c8fc6.png" height="20pt" style="opacity: 1;" url="https://rm-content.s3.amazonaws.com/5194a14fc8cfb50000000169/422560/upload-7cb9ac80-75bd-11e5-abb7-57bb780c8fc6.png">
+                </a>
+
                 {% endblock%}
 
             </div>
@@ -63,10 +67,10 @@
                 {% block navbar_dropdown_menu %}{% page_menu "pages/menus/dropdown.html" %}{% endblock%}
 
                 <ul class="nav navbar-nav navbar-right">
-                <li class="navbar-brand"><div class="fb-like" data-href="https://www.facebook.com/agentyzmin" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div></li>
-                <li class="navbar-brand"><a href="https://twitter.com/agentyzmin" class="twitter-follow-button" data-show-count="false">Follow @agentyzmin</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-                <li ><a href=""><img height="20" width="20" src="http://images.seeklogo.net/2016/05/instagram-logo-vector-download.jpg" alt=""></a></li>
-            </ul>
+                    <li class="navbar-brand"><div class="fb-like" data-href="https://www.facebook.com/agentyzmin" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div></li>
+                    <li class="navbar-brand"><a href="https://twitter.com/agentyzmin" class="twitter-follow-button" data-show-count="false">Follow @agentyzmin</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                    <li class="navbar-brand"><img height="20" width="20" src="http://images.seeklogo.net/2016/05/instagram-logo-vector-download.jpg" alt=""></li>
+                </ul>
             </div>
 
 
@@ -75,7 +79,7 @@
 
     {% block featured_image %}{% endblock %}
 
-    <div class="container">
+    <div class="container page-data">
 
     {% nevercache %}
     {% if messages %}
@@ -91,8 +95,13 @@
     {% endnevercache %}
 
 
-    <div class="col-md-offset-3">
-        <h1>{% block title %}{% endblock %}</h1>
+    <div class="row" id="title-row">
+        {% if project.status %}
+            <div class="col-md-3" id="status">{{ project.status }}</div>
+        {% endif %}
+        <div class="col-md-9">
+            <h1>{% block title %}{% endblock %}</h1>
+        </div>
     </div>
 
 {#    <div class="col-md-10 col-md-offset-1">#}
@@ -100,32 +109,24 @@
 {#    </div>#}
     </div>
 
-    <footer">
-        <div class="container">
 
-{#            {% page_menu "menus/footer.html" %}#}
-
-            <div class="row">
-            <p class="site-info text-center">
-                {% trans "Powered by" %}
-                <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-                <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-                {% trans "and" %}
-                <a href="http://www.djangoproject.com">Django</a>
-                <span class="separator">|</span>
-                {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
-                {% ifinstalled mezzanine.mobile %}
-                <span class="separator">|</span>
-                <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-                {% endifinstalled %}
-            </p>
-            </div>
+    <footer class="footer navbar-de " style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+        <p class="site-info text-center">
+            наші партнери
+        </p>
+        <div id="partners" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap">
+            <a href="#" class="footer-image"><img src="{% static "img/upload-a9f7c610-2efd-11e6-a310-fbc242ae00bd.png" %}" alt=""></a>
+            <a href="#" class="footer-image"><img src="{% static "img/upload-5992d490-2efc-11e6-94f2-c3123c8d99ba.png" %}" alt=""></a>
+            <a href="#" class="footer-image"><img src="{% static "img/upload-b36a23a0-2efd-11e6-aca3-0309a26a5aaa.png" %}" alt=""></a>
+            <a href="#" class="footer-image"><img src="{% static "img/upload-2ffa76a0-9091-11e6-b813-35d4a1eb363c.png" %}" alt=""></a>
+            <a href="#" class="footer-image"><img src="{% static "img/upload-de1f4360-9090-11e6-9985-1d1ebaecb855.png" %}" alt=""></a>
+            <a href="#" class="footer-image"><img src="{% static "img/upload-b1d167c0-9090-11e6-b936-85f3261bb1e6.png" %}" alt=""></a>
         </div>
     </footer>
 
-{% block footer_js %}
-{% include "includes/footer_scripts.html" %}
-{% endblock %}
+    {% block footer_js %}
+        {% include "includes/footer_scripts.html" %}
+    {% endblock %}
 
 
 
